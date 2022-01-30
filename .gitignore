@@ -6,6 +6,7 @@ dist
 *.swp
 *.db
 ._*
+*_design
 # 「.htaccess」と「.htpasswd」など、.ht で始まるファイルを追跡しない
 .ht*
 

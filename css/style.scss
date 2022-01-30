@@ -13,12 +13,15 @@
 @import "layout/l-footer";
 
 // Component
-@import "object/component/c-nav";
-@import "object/component/c-heading";
-@import "object/component/c-card";
+
+@import "object/component/c-flex";
 @import "object/component/c-btn";
+// @import "object/component/c-nav";
+@import "object/component/c-heading";
+// @import "object/component/c-card";
 
 // Project
+@import "object/project/p-top";
 @import "object/project/p-news";
 @import "object/project/p-furniture";
 @import "object/project/p-recruit";

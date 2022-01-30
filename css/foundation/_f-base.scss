@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+// main {
+//   padding: 5rem;
+// }
+
+section {
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+@mixin letterSpacing($letterSpacing: 0.05em) {
+  letter-spacing: $letterSpacing;
+}
+
+
+// メディアクエリ
+
+// color
+$main-color: #24a2b3;
+$sub-color: #aa8f7b;
+$font-color: #333333;
+$link-color: #125cb3;

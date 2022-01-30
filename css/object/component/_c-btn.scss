@@ -1,0 +1,32 @@
+.c-btn__inner {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.c-btn--center {
+  text-align: center;
+}
+
+
+.p-btn__inner {
+  max-width: 220px;
+  min-width: 220px;
+  text-align: center;
+  border: 2px solid #333333;
+  background: #fcfcfc;
+  margin-top: 5rem;
+}
+
+.p-btn__inner__link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0 1em;
+  line-height: 3;
+  @include letterSpacing(0.1em);
+}

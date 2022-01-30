@@ -1,0 +1,44 @@
+# Common
+node_modules
+build
+dist
+.sass-cache
+*.swp
+*.db
+._*
+# 「.htaccess」と「.htpasswd」など、.ht で始まるファイルを追跡しない
+.ht*
+
+# Mac
+.Spotlight-V100
+.DS_Store
+.Trashes
+
+# Windows
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.stackdump
+*.lnk
+
+# Design
+*.psd
+*.ai
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Node
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*

@@ -1,0 +1,71 @@
+.p-section__furniture {
+  max-width: 1280px;
+}
+
+// panel
+.p-panel__wrap {
+  margin-top: 80px;
+}
+
+.p-panel__inner {
+  @include baseFlex;
+}
+
+.p-panel__inner:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.p-panel__inner:nth-child(even) {
+  margin-top: 7rem;
+}
+
+.p-panel__inner:nth-child(odd) .p-panel__item:nth-child(odd) {
+  margin-right: 60px;
+}
+
+.p-panel__inner:nth-child(even) .p-panel__item:nth-child(even) {
+  margin-right: 60px;
+}
+
+.p-panel__img {
+  max-width: 610px;
+}
+
+// card
+.p-card__wrap .p-ttl--3 {
+  margin-top: 3rem;
+}
+
+.p-card__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 70px;
+  margin-top: 80px;
+}
+
+.p-card__wrap__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+// store
+.store {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 5rem;
+}
+
+.a-img__zoom {
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@include mq($pcSize) {
+  .p-card__wrap {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 40px;
+  }
+}

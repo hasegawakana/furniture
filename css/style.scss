@@ -4,7 +4,6 @@
 // @import "foundation/f-variables";
 @import "foundation/f-reset";
 @import "foundation/f-base";
-// @import "foundation/f-config";
 @import "foundation/f-mixin";
 
 // Layout
@@ -13,12 +12,10 @@
 @import "layout/l-footer";
 
 // Component
-
+@import "object/component/c-link";
 @import "object/component/c-flex";
 @import "object/component/c-btn";
-// @import "object/component/c-nav";
 @import "object/component/c-heading";
-// @import "object/component/c-card";
 
 // Project
 @import "object/project/p-top";

@@ -1,0 +1,30 @@
+.p-section__recruit {
+  background-image: url(../../../images/img-recruit-01.png);
+  background-attachment: fixed;
+  min-height: 430px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.p-ttl__recruit {
+  color: #fff;
+}
+
+.p-txt__recruit {
+  color: #fff;
+  text-align: center;
+  @include letterSpacing(0.20em);
+}
+
+.p-btn__wrap__recruit {
+  text-align: center;
+}
+
+.p-btn__inner__recruit {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.p-btn__inner__link__recruit {
+  color: #fff;
+}

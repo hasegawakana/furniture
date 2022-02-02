@@ -9,15 +9,16 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Quicksand:wght@500&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Serif+JP:wght@300&family=Quicksand:wght@500&display=swap"
     rel="stylesheet">
 </head>
 
-<body>
+<body id="js-body">
   <div class="wrapper">
     <header class="l-header p-header">
       <h1><img class="l-header__logo" src="images/logo.png" alt="kagu"></h1>
-      <nav class="p-nav__wrap">
+      <nav class="p-nav__wrap c-hamburger__menu close" id="js-hamburger__menu" role="navigation">
         <ul class="p-nav__inner">
           <li class="p-nav__item"><a class="p-nav__item__link" href="#">取扱い家具</a></li>
           <li class="p-nav__item"><a class="p-nav__item__link" href="#">販売店・展示場一覧</a></li>
@@ -25,10 +26,15 @@
           <li class="p-nav__item"><a class="p-nav__item__link" href="#">お知らせ</a></li>
         </ul>
         <ul class="p-nav__inp">
-          <li><a class="p-nav__inp__item p-nav__online__store__link" href="#">おONLINE STORE</a></li>
+          <li><a class="p-nav__inp__item p-nav__online__store__link" href="#">ONLINE STORE</a></li>
           <li><a class="p-nav__inp__item p-nav__contact__link" href="#">お問い合わせ</a></li>
         </ul>
       </nav>
+      <button class="c-hamburger__menu__btn close" id="js-hamburger__menu__btn">
+        <span class="c-hamburger__menu__btn--top"></span>
+        <span class="c-hamburger__menu__btn--middle"></span>
+        <span class="c-hamburger__menu__btn--bottom"></span>
+      </button>
     </header>
     <div class="p-top__wrap">
       <p class="p-sab__txt">自分らしさをレイアウトする</p>
@@ -164,7 +170,7 @@
               </div>
               <div class="p-panel__inner">
                 <div class="p-panel__img p-panel__item a-img__wrap">
-                  <img class="a-img__zoom" src="images/img-online.png" alt="">
+                  <img class="a-img__zoom online__store__img" src="images/img-online.png" alt="">
                 </div>
                 <div class="p-panel__txt p-panel__item">
                   <h3 class="p-ttl--3">ONLINE STORE</h3>
@@ -190,7 +196,7 @@
     <footer class="l-footer p-footer">
       <div class="c-footer__wrap">
         <div class="c-footer__inner">
-          <p class="c-footer__logo"><img src="/images/logo.png" alt="株式会社kagu"></p>
+          <p class="c-footer__logo"><img src="images/logo-white.png" alt="株式会社kagu"></p>
           <div class="c-footer__address">株式会社KAGU<br>愛知県名古屋市家具区家具町 12-3</div>
           <div class="c-footer__tel">TEL. 052-123-4567</div>
         </div>
@@ -222,6 +228,7 @@
       <button class="c-btn__inner slide-bg"><a href="#" class="c-btn__inner__link">dummy__text__dummy</a></button>
     </div> -->
   </div>
+  <script src="js/hamburger.js"></script>
 </body>
 
 </html>

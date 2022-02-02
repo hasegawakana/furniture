@@ -3,27 +3,44 @@
   height: 80px;
   font-size: 1.5rem;
   background: #fcfcfc;
+  box-shadow: 1px 2px 3px 3px rgba(177, 175, 175, .2);
+  position: fixed;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
+
+  @include mq($pcSize) {
+    display: block;
+  }
 }
 
 .l-header__logo {
-vertical-align: middle;
-padding: 28.5px 0;
-padding-left: 40px;
+  vertical-align: middle;
+  padding: 28.5px 0;
+  padding-left: 40px;
 }
 
 .p-nav__wrap {
   display: flex;
   justify-content: space-between;
+
+  @include mq($pcSize) {
+    display: block;
+    z-index: 100;
+    width: 100%;
+    padding: 5% 8%;
+  }
 }
 
 .p-nav__inner {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 518px;
   width: 100%;
+
+  @include mq($pcSize) {
+    display: block;
+  }
 }
 
 .p-nav__item__link {
@@ -36,6 +53,10 @@ padding-left: 40px;
   align-items: center;
   justify-content: flex-end;
   text-align: center;
+
+  @include mq($pcSize) {
+    display: block;
+  }
 }
 
 .p-nav__inp__item {
@@ -43,19 +64,27 @@ padding-left: 40px;
   color: #fff;
   padding: 28.5px 1em;
   font-family: 'Quicksand', sans-serif;
+
+  @include mq($pcSize) {
+    margin-top: 2%;
+  }
 }
 
 .p-nav__online__store__link {
   width: 195px;
   background-color: $main-color;
+
+  @include mq($pcSize) {
+    width: auto;
+  }
 }
 
 .p-nav__online__store__link::before {
   content: "";
   display: inline-block;
   width: 20px;
-  height: 21px;
-  background-image: url(../../images/icon-store.svg);
+  height: 23px;
+  background-image: url(../images/icon-store.svg);
   background-repeat: no-repeat;
   vertical-align: middle;
   margin-right: 10px;
@@ -64,27 +93,19 @@ padding-left: 40px;
 .p-nav__contact__link {
   width: 175px;
   background-color: $sub-color;
+
+  @include mq($pcSize) {
+    width: auto;
+  }
 }
+
 .p-nav__contact__link::before {
   content: "";
   display: inline-block;
   width: 20px;
-  height: 21px;
-  background-image: url(../../images/icon-contact.svg);
+  height: 19px;
+  background-image: url(../images/icon-contact.svg);
   background-repeat: no-repeat;
   vertical-align: middle;
   margin-right: 10px;
-}
-
-
-@include mq($tabSixs) {
-  .p-nav__contact__link {
-    background-color: pink;
-  }
-}
-
-@include mq($pcSize) {
-  .p-nav__wrap {
-    opacity: 0.2;
-  }
 }

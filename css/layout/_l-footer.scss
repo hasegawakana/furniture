@@ -1,6 +1,10 @@
 .l-footer {
   padding: 5rem;
   min-height: 354px;
+
+  @include mq($tabSize) {
+    padding: 3rem;
+  }
 }
 
 .p-footer {
@@ -37,10 +41,21 @@
 
 .c-footer__nav__wrap {
   display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+  @include mq($tabSize) {}
+}
+
+.c-footer__nav__inner {
+  margin-right: 66px;
+
+  @include mq($tabSize) {
+    margin-right: 0;
+  }
 }
 
 .c-footer__item {
-  margin-right: 66px;
   margin-bottom: 25px;
 }
 

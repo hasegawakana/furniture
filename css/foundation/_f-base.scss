@@ -4,8 +4,20 @@ $sub-color: #aa8f7b;
 $font-color: #333333;
 $link-color: #125cb3;
 
+// メディアクエリ
+$pcSize: 1140px;
+$tabSize: 768px;
+$spSize: 540px;
+
+@mixin mq($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
 html {
   font-size: 62.5%;
+  overflow-y: scroll;
 }
 
 body {
@@ -16,6 +28,10 @@ body {
 section {
   margin: 0 auto;
   padding: 5rem;
+
+  @include mq($tabSize) {
+    padding: 3rem;
+  }
 }
 
 a:hover {
@@ -32,14 +48,10 @@ a:hover {
   overflow: hidden;
 }
 
+.a-img__zoom {
+  transition: transform .3s ease;
 
-// メディアクエリ
-$pcSize: 1140px;
-$tabSixs: 768px;
-$spSixs: 540px;
-
-@mixin mq($break-point) {
-  @media screen and (max-width: $break-point) {
-    @content;
+  &:hover {
+    transform: scale(1.1);
   }
 }

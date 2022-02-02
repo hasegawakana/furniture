@@ -24,4 +24,7 @@
   position: absolute;
   top: 35%;
   padding-left: 104px;
+  @include mq($tabSize) {
+    padding-left: 50px;
+  }
 }

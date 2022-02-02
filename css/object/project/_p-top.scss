@@ -1,6 +1,6 @@
 .p-top__wrap {
-  background: linear-gradient(to bottom, #fff, transparent),
-    url(../../../images/bg-top-01.png);
+  background: linear-gradient(to bottom, #8c76651c),
+    url(../images/bg-top-01.png);
   background-repeat: no-repeat;
   background-position: right top;
   background-size: cover;
@@ -17,8 +17,9 @@
 }
 
 .p-sab__txt {
-  color: #333333;
+  color: #fefefe;
   font-size: 3.6rem;
+  font-family: 'Noto Serif JP', serif;
   @include letterSpacing(0.20em);
   position: absolute;
   top: 35%;

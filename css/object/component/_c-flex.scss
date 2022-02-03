@@ -1,0 +1,9 @@
+@mixin baseFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-flex {
+  @include baseFlex;
+}

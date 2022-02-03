@@ -1,0 +1,144 @@
+.l-header {
+  width: 100%;
+  height: 80px;
+  font-size: 1.5rem;
+  background: #fcfcfc;
+  box-shadow: 1px 2px 3px 3px rgba(177, 175, 175, .2);
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq($pcSize) {
+    display: block;
+  }
+}
+
+.l-header__logo {
+  vertical-align: middle;
+  padding: 28.5px 0;
+  padding-left: 40px;
+}
+
+.p-nav__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq($pcSize) {
+    display: block;
+    z-index: 100;
+    width: 100%;
+    padding: 5% 8%;
+    padding-bottom: 20%;
+    font-size: 2.0rem;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+.p-nav__wrap.show .p-nav__item__link {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 7px;
+    position: absolute;
+    bottom: 31px;
+    transform: translate(10px);
+    transition: transform .3s;
+  }
+
+  &:hover {
+    &::after {
+      content: "";
+      transform: translate(30px);
+      transition: transform .3s;
+    }
+  }
+}
+
+.p-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  @include mq($pcSize) {
+    display: block;
+  }
+}
+
+.p-nav__item__link {
+  display: block;
+  padding: 28.5px 1em;
+}
+
+.p-nav__inp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+
+  @include mq($pcSize) {
+    display: block;
+  }
+}
+
+.p-nav__inp__item {
+  display: block;
+  color: #fff;
+  padding: 28.5px 1em;
+  font-family: 'Quicksand', sans-serif;
+
+  @include mq($pcSize) {
+    margin-top: 5%;
+  }
+}
+
+.p-nav__online__store__link {
+  width: 195px;
+  height: 80px;
+  background-color: $main-color;
+
+  @include mq($pcSize) {
+    width: auto;
+  }
+}
+
+.p-nav__online__store__link::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 26px;
+  background-image: url(../images/icon-store.svg);
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.p-nav__contact__link {
+  width: 175px;
+  height: 80px;
+  background-color: $sub-color;
+
+  @include mq($pcSize) {
+    width: auto;
+  }
+}
+
+.p-nav__contact__link::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background-image: url(../images/icon-contact.svg);
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}

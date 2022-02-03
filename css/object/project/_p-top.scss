@@ -1,0 +1,30 @@
+.p-top__wrap {
+  background: linear-gradient(to bottom, #8c76651c),
+    url(../images/bg-top-01.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  background-attachment: fixed;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    padding-top: 80%;
+  }
+}
+
+.p-sab__txt {
+  color: #fefefe;
+  font-size: 3.6rem;
+  font-family: 'Noto Serif JP', serif;
+  @include letterSpacing(0.20em);
+  position: absolute;
+  top: 35%;
+  padding-left: 104px;
+  @include mq($tabSize) {
+    padding-left: 50px;
+  }
+}

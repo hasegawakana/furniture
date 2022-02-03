@@ -1,0 +1,57 @@
+// color
+$main-color: #24a2b3;
+$sub-color: #aa8f7b;
+$font-color: #333333;
+$link-color: #125cb3;
+
+// メディアクエリ
+$pcSize: 1140px;
+$tabSize: 768px;
+$spSize: 540px;
+
+@mixin mq($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+section {
+  margin: 0 auto;
+  padding: 5rem;
+
+  @include mq($tabSize) {
+    padding: 3rem;
+  }
+}
+
+a:hover {
+  cursor: pointer;
+  color: $link-color;
+}
+
+@mixin letterSpacing($letterSpacing: 0.05em) {
+  letter-spacing: $letterSpacing;
+}
+
+// animation
+.a-img__wrap {
+  overflow: hidden;
+}
+
+.a-img__zoom {
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,73 @@
+.l-footer {
+  padding: 5rem;
+  min-height: 354px;
+
+  @include mq($tabSize) {
+    padding: 3rem;
+  }
+}
+
+.p-footer {
+  background-color: #292929;
+  color: #fff;
+}
+
+.c-footer__wrap {
+  max-width: 960px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-footer__logo {
+  margin-bottom: 30px;
+}
+
+.c-footer__address {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.c-footer__tel {
+  font-size: 1.8rem;
+}
+
+.c-footer__item__link {
+  display: block;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.c-footer__nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+  @include mq($tabSize) {}
+}
+
+.c-footer__nav__inner {
+  margin-right: 66px;
+
+  @include mq($tabSize) {
+    margin-right: 0;
+  }
+}
+
+.c-footer__item {
+  margin-bottom: 25px;
+}
+
+.c-copy {
+  font-size: 1.2rem;
+}
+
+.p-ul__nest__item {
+  margin-left: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.p-ul__nest__wrap {
+  margin-top: 18px;
+}

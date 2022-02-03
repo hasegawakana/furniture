@@ -18,12 +18,12 @@
   <div class="wrapper">
     <header class="l-header p-header">
       <h1><img class="l-header__logo" src="images/logo.png" alt="kagu"></h1>
-      <nav class="p-nav__wrap c-hamburger__menu close" id="js-hamburger__menu" role="navigation">
+      <nav class="p-nav__wrap c-hamburger__menu" id="js-hamburger__menu" role="navigation">
         <ul class="p-nav__inner">
-          <li class="p-nav__item"><a class="p-nav__item__link" href="#">取扱い家具</a></li>
-          <li class="p-nav__item"><a class="p-nav__item__link" href="#">販売店・展示場一覧</a></li>
-          <li class="p-nav__item"><a class="p-nav__item__link" href="#">採用情報</a></li>
-          <li class="p-nav__item"><a class="p-nav__item__link" href="#">お知らせ</a></li>
+          <li class="p-nav__item"><a class="p-nav__item__link" href="#news">お知らせ</a></li>
+          <li class="p-nav__item"><a class="p-nav__item__link" href="#furniture">取扱い家具</a></li>
+          <li class="p-nav__item"><a class="p-nav__item__link" href="#store">販売店・展示場一覧</a></li>
+          <li class="p-nav__item"><a class="p-nav__item__link" href="#recruit">採用情報</a></li>
         </ul>
         <ul class="p-nav__inp">
           <li><a class="p-nav__inp__item p-nav__online__store__link" href="#">ONLINE STORE</a></li>
@@ -42,7 +42,7 @@
     <main>
       <article>
         <div class="p-bg__color">
-          <section class="p-section__news">
+          <section class="p-section__news" id="news">
             <h2 class="p-ttl--2 p-ttl__news">お知らせ</h2>
             <div class="c-news__wrap">
               <div class="c-news__inner">
@@ -83,7 +83,7 @@
             </div>
           </section>
         </div>
-        <section class="p-section__furniture">
+        <section class="p-section__furniture" id="furniture">
           <h2 class="p-ttl--2 p-ttl__furniture">取扱い家具</h2>
           <div class="p-panel__wrap">
             <div class="p-panel__inner">
@@ -154,7 +154,7 @@
         </section>
 
         <div class="p-bg__color">
-          <div class="store">
+          <div class="store" id="store">
             <div class="p-panel__wrap">
               <div class="p-panel__inner">
                 <div class="p-panel__img p-panel__item a-img__wrap">
@@ -183,7 +183,7 @@
             </div>
           </div>
         </div>
-        <section class="p-section__recruit">
+        <section class="p-section__recruit" id="recruit">
           <h2 class="p-ttl--2 p-ttl__recruit">採用情報</h2>
           <p class="c-txt p-txt__recruit">KAGUの新卒・中と採用情報を掲載しております。<br>アルバイト情報についても掲載しております。</p>
           <div class="c-btn__wrap p-btn__wrap__recruit">
@@ -229,6 +229,8 @@
     </div> -->
   </div>
   <script src="js/hamburger.js"></script>
+  <script src="js/scroll.js"></script>
+
 </body>
 
 </html>

@@ -162,7 +162,44 @@ a:hover {
     z-index: 100;
     width: 100%;
     padding: 5% 8%;
+    padding-bottom: 20%;
+    font-size: 2.0rem;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
   }
+}
+
+.p-nav__wrap.show .p-nav__item__link {
+  position: relative;
+}
+
+.p-nav__wrap.show .p-nav__item__link::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 7px;
+  position: absolute;
+  bottom: 31px;
+  -webkit-transform: translate(10px);
+          transform: translate(10px);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.p-nav__wrap.show .p-nav__item__link:hover::after {
+  content: "";
+  -webkit-transform: translate(30px);
+          transform: translate(30px);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .p-nav__inner {
@@ -216,12 +253,13 @@ a:hover {
 
 @media screen and (max-width: 1140px) {
   .p-nav__inp__item {
-    margin-top: 2%;
+    margin-top: 5%;
   }
 }
 
 .p-nav__online__store__link {
   width: 195px;
+  height: 80px;
   background-color: #24a2b3;
 }
 
@@ -235,7 +273,7 @@ a:hover {
   content: "";
   display: inline-block;
   width: 20px;
-  height: 23px;
+  height: 26px;
   background-image: url(../images/icon-store.svg);
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -244,6 +282,7 @@ a:hover {
 
 .p-nav__contact__link {
   width: 175px;
+  height: 80px;
   background-color: #aa8f7b;
 }
 
@@ -264,8 +303,91 @@ a:hover {
   margin-right: 10px;
 }
 
+.c-hamburger__menu {
+  position: absolute;
+  right: 0;
+}
+
 .c-hamburger__menu:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1140px) {
+  .c-hamburger__menu {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.c-hamburger__menu.show {
+  opacity: 1;
+  -webkit-animation: toLeft .3s forwards ease;
+          animation: toLeft .3s forwards ease;
+}
+
+@-webkit-keyframes toLeft {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .c-hamburger__menu.close {
+    opacity: 0;
+    -webkit-animation: toRight .6s forwards ease;
+            animation: toRight .6s forwards ease;
+  }
+}
+
+@-webkit-keyframes toRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes toRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 .c-hamburger__menu__btn {
@@ -338,62 +460,6 @@ a:hover {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-}
-
-@media screen and (max-width: 1140px) {
-  .c-hamburger__menu.close {
-    visibility: hidden;
-  }
-}
-
-.c-hamburger__menu.show {
-  background: #fff;
-  width: 100%;
-  height: 100vh;
-}
-
-@media screen and (max-width: 1140px) {
-  .c-hamburger__menu.show {
-    visibility: visible;
-  }
-}
-
-@-webkit-keyframes toBottom {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@keyframes toBottom {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@-webkit-keyframes toTop {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -100%;
-    opacity: 0;
-  }
-}
-
-@keyframes toTop {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -100%;
-    opacity: 0;
-  }
 }
 
 .l-footer {
@@ -498,7 +564,7 @@ a:hover {
   width: 20px;
   height: 5px;
   position: absolute;
-  bottom: 2px;
+  bottom: 5px;
   -webkit-transform: translate(10px);
           transform: translate(10px);
   -webkit-transition: -webkit-transform .3s;

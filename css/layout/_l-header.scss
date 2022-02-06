@@ -40,26 +40,11 @@
 
 .p-nav__wrap.show .p-nav__item__link {
   position: relative;
+  @include arrow;
 
   &::after {
-    content: "";
-    display: inline-block;
-    background-image: url(../images/icon-arrow.svg);
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 7px;
-    position: absolute;
     bottom: 31px;
-    transform: translate(10px);
-    transition: transform .3s;
-  }
-
-  &:hover {
-    &::after {
-      content: "";
-      transform: translate(30px);
-      transition: transform .3s;
-    }
+    height: 7px;
   }
 }
 

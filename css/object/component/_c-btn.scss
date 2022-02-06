@@ -1,6 +1,10 @@
 .c-btn__wrap {
   margin-top: auto;
   padding-top: 5rem;
+
+  @include mq($spSize) {
+    text-align: center;
+  }
 }
 
 .c-btn__inner {

@@ -5,6 +5,10 @@
   @include mq($tabSize) {
     padding: 3rem;
   }
+
+  @include mq($tabSize) {
+    padding: 5rem;
+  }
 }
 
 .p-footer {
@@ -18,6 +22,17 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @include mq($spSize) {
+    display: block;
+    height: 100%;
+  }
+}
+
+.c-footer__inner {
+  @include mq($spSize) {
+    text-align: center;
+  }
 }
 
 .c-footer__logo {
@@ -27,16 +42,43 @@
 .c-footer__address {
   font-size: 1.4rem;
   margin-bottom: 30px;
+  line-height: 2;
 }
 
 .c-footer__tel {
   font-size: 1.8rem;
+  font-family: 'Quicksand', sans-serif;
+
+  @include mq($spSize) {
+    font-size: 24px;
+  }
+}
+
+.c-footer__item {
+  margin-bottom: 25px;
+
+  @include mq($spSize) {
+    border-bottom: 1px solid #555555;
+    padding-right: 5%;
+    padding-bottom: 20px;
+    padding-left: 5%;
+  }
 }
 
 .c-footer__item__link {
   display: block;
   color: #fff;
   font-size: 1.4rem;
+  position: relative;
+
+  @include mq($spSize) {
+    @include arrow;
+
+    &::after {
+      background-image: url(../images/icon-arrow-white.svg);
+      right: 10px;
+    }
+  }
 }
 
 .c-footer__nav__wrap {
@@ -44,7 +86,11 @@
   justify-content: space-between;
   width: 50%;
 
-  @include mq($tabSize) {}
+  @include mq($spSize) {
+    display: block;
+    width: auto;
+    margin-top: 10%;
+  }
 }
 
 .c-footer__nav__inner {
@@ -52,15 +98,8 @@
 
   @include mq($tabSize) {
     margin-right: 0;
+    font-size: 14px;
   }
-}
-
-.c-footer__item {
-  margin-bottom: 25px;
-}
-
-.c-copy {
-  font-size: 1.2rem;
 }
 
 .p-ul__nest__item {
@@ -70,4 +109,12 @@
 
 .p-ul__nest__wrap {
   margin-top: 18px;
+}
+
+.c-copy {
+  font-size: 1.2rem;
+
+  @include mq($spSize) {
+    text-align: center;
+  }
 }

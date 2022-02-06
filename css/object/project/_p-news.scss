@@ -26,11 +26,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  @include mq($spSize) {
+    display: block;
+  }
 }
 
 .c-news__inner {
   margin-top: 5rem;
   width: calc((100% - 50%) - 5rem);
+  @include mq($spSize) {
+    width: auto;
+  }
 }
 
 .c-news__inner>.c-flex {

@@ -1,30 +1,40 @@
 .p-top__wrap {
-  background: linear-gradient(to bottom, #8c76651c),
-    url(../images/bg-top-01.png);
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: cover;
-  width: 100%;
-  height: 80vh;
-  background-attachment: fixed;
-  position: relative;
+  .p-top__img {
+    width: auto;
+    height: 900px;
 
-  &::before {
-    display: block;
-    content: "";
-    padding-top: 80%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
 .p-sab__txt {
-  color: #fefefe;
+  color: #fff;
+  background: linear-gradient(to right, #d2cecda3, #d2cecda3);
   font-size: 3.6rem;
   font-family: 'Noto Serif JP', serif;
   @include letterSpacing(0.20em);
   position: absolute;
   top: 35%;
-  padding-left: 104px;
+  margin-left: 104px;
+  padding: 0 0.5em;
+  z-index: 1;
+
+  @include mq($pcSize) {
+    padding-left: 50px;
+  }
+
   @include mq($tabSize) {
     padding-left: 50px;
+    font-size: 2.6rem;
+  }
+
+  @include mq($spSize) {
+    padding-left: 20px;
+    font-size: 2.4rem;
   }
 }

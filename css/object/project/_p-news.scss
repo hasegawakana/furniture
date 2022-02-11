@@ -18,7 +18,7 @@
   }
 
   @include mq($tabSize) {
-    padding: 4rem 1rem 4rem;
+    padding: 4rem;
   }
 }
 
@@ -34,6 +34,7 @@
 .c-news__inner {
   margin-top: 5rem;
   width: calc((100% - 50%) - 5rem);
+  font-family: '小塚ゴシック Pr6N,sans-serif';
   @include mq($spSize) {
     width: auto;
   }
